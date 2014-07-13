@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+  
+    <groupId>org.fleshframework</groupId>
+    <artifactId>flesh-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>flesh-parent</name>
+    <url>http://www.fleshframework.org</url>
+  
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.spring.boot>1.1.3.RELEASE</version.spring.boot>
+        <version.junit>3.8.1</version.junit>
+    </properties>
+  
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-amqp</artifactId>
+                <version>${version.spring.boot}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${version.junit}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <scm>
+        <url>scm:git:git@github.com:jakubskopal/flesh-framework.git</url>
+        <connection>scm:git:git@github.com:jakubskopal/flesh-framework.git</connection>
+        <developerConnection>scm:git:git@github.com:jakubskopal/flesh-framework.git</developerConnection>
+    </scm>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
